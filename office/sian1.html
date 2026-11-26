@@ -1,0 +1,83 @@
+<!DOCTYPE html><html lang="ko"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css"><style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { -webkit-font-smoothing: antialiased; }
+body { font-family: 'Pretendard Variable', Pretendard, sans-serif; color: #17181a; background: #fff; letter-spacing: -0.01em;
+  word-break: keep-all; }
+a { color: inherit; text-decoration: none; }
+img { display: block; }
+.wrap { width: 1240px; margin: 0 auto; }
+.hd { height: 84px; display: flex; align-items: center; justify-content: space-between; }
+.hd .logo img { height: 40px; }
+.hd nav { display: flex; gap: 40px; font-size: 15px; font-weight: 500; }
+.hd .tel { font-size: 14px; font-weight: 600; margin-left: 48px; }
+.hd .right { display: flex; align-items: center; }
+.btn { display: inline-flex; align-items: center; gap: 10px; height: 54px; padding: 0 28px; font-size: 16px; font-weight: 600; }
+.btn.dark { background: #17181a; color: #fff; }
+.btn.line { border: 1px solid #17181a; }
+.btn.white { background: #fff; color: #17181a; }
+.btn.wline { border: 1px solid rgba(255,255,255,.85); color: #fff; }
+.sec-title { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 22px; }
+.sec-title h2 { font-size: 26px; font-weight: 700; letter-spacing: -0.0275em; }
+.sec-title a { font-size: 14px; color: #6b6e75; }
+.cap b { display: block; font-size: 16px; font-weight: 600; margin-top: 12px; }
+.cap span { display: block; font-size: 13px; color: #7a7d84; margin-top: 4px; }
+.mo-only { display: none; }
+@media (max-width: 600px) {
+  .wrap { width: auto; margin: 0 20px; }
+  .hd { height: 60px; }
+  .hd .logo img { height: 30px; }
+  .hd nav, .hd .tel { display: none; }
+  .mo-only { display: block; }
+  .burger { width: 22px; height: 14px; border-top: 2px solid currentColor; border-bottom: 2px solid currentColor; position: relative; }
+  .burger::after { content: ""; position: absolute; left: 0; right: 0; top: 4px; border-top: 2px solid currentColor; }
+  .btn { height: 50px; padding: 0 20px; font-size: 15px; }
+}
+
+.hero { position: relative; height: 860px; color: #fff; background: #222 url(_img/greencos.jpg) center/cover; }
+.hero::before { content: ""; position: absolute; inset: 0;
+  background: linear-gradient(90deg, rgba(10,10,12,.62) 0%, rgba(10,10,12,.25) 55%, rgba(10,10,12,.05) 100%); }
+.hero .hd { position: relative; z-index: 2; color: #fff; }
+.hero .copy { position: absolute; z-index: 2; left: 50%; transform: translateX(-620px); bottom: 120px; width: 640px; }
+.hero h1 { font-size: 58px; line-height: 1.28; font-weight: 700; letter-spacing: -0.0275em; }
+.hero p { font-size: 19px; margin-top: 22px; opacity: .92; line-height: 1.6; }
+.hero .btns { display: flex; gap: 12px; margin-top: 40px; }
+.hero .place { position: absolute; z-index: 2; right: calc(50% - 620px); bottom: 40px; font-size: 13px; opacity: .85; }
+.facts { position: absolute; z-index: 2; left: 50%; transform: translateX(-620px); bottom: 40px; display: flex; gap: 36px; font-size: 14px; opacity: .9; }
+.fields { padding: 90px 0 100px; }
+.grid1 { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; grid-template-rows: 250px 250px; gap: 16px; }
+.tile { position: relative; overflow: hidden; background: #ddd center/cover; color: #fff; }
+.tile::after { content: ""; position: absolute; inset: 0; background: linear-gradient(0deg, rgba(0,0,0,.5), rgba(0,0,0,0) 55%); }
+.tile b { position: absolute; z-index: 1; left: 22px; bottom: 18px; font-size: 20px; font-weight: 700; }
+.tile small { position: absolute; z-index: 1; left: 22px; bottom: 50px; font-size: 13px; opacity: .9; }
+.tile.big { grid-row: span 2; }
+.tile.big b { font-size: 30px; }
+.tile.more { background: #f3f3f1; color: #17181a; display: flex; flex-direction: column; justify-content: flex-end; padding: 22px; }
+.tile.more::after { display: none; }
+.tile.more span { font-size: 18px; font-weight: 600; }
+.tile.more em { font-style: normal; font-size: 13px; color: #6b6e75; margin-top: 6px; }
+@media (max-width: 600px) {
+  .hero { height: 700px; }
+  .hero::before { background: linear-gradient(0deg, rgba(10,10,12,.72) 0%, rgba(10,10,12,.2) 60%, rgba(10,10,12,.1) 100%); }
+  .hero .copy { left: 20px; right: 20px; width: auto; transform: none; bottom: 96px; }
+  .hero h1 { font-size: 32px; }
+  .hero p { font-size: 15px; margin-top: 14px; }
+  .hero .btns { flex-direction: column; margin-top: 26px; }
+  .hero .btns .btn { justify-content: center; }
+  .facts { left: 20px; right: 20px; transform: none; bottom: 28px; gap: 14px; font-size: 12px; flex-wrap: wrap; }
+  .hero .place { display: none; }
+  .fields { padding: 56px 0; }
+  .grid1 { grid-template-columns: 1fr 1fr; grid-template-rows: 220px 150px 150px 150px; gap: 10px; }
+  .tile.big { grid-column: span 2; grid-row: span 1; }
+  .tile.big b { font-size: 24px; }
+  .tile b { font-size: 17px; left: 16px; bottom: 14px; }
+  .tile small { display: none; }
+}
+</style></head><body>
+<section class="hero"><header class="wrap hd"><a class="logo"><img src="_img/logo_white.svg" alt="SPACE331"></a><div class="right"><nav><a>회사소개</a><a>시공사례</a><a>오피스 솔루션</a><a>3분 공간 진단</a><a>프로젝트 문의</a></nav><span class="tel">02-2283-1331</span><span class="mo-only burger"></span></div></header>
+  <div class="copy"><h1>오피스 인테리어 전문,<br>기업의 성장을 담는 공간</h1><p>문정업무단지를 중심으로 오피스 이전·설계·시공을 함께합니다.</p>
+    <div class="btns"><a class="btn white">프로젝트 상담 →</a><a class="btn wline">3분 공간 진단</a></div></div>
+  <div class="facts"><span>실내건축공사업 면허</span><span>오피스 이전 · 설계 · 시공</span><span>시공사례 170건 이상</span></div>
+  <div class="place">그린코스(주) · 서울 강서구 마곡동 · 800평</div>
+</section>
+<section class="wrap fields"><div class="sec-title"><h2>시공 분야</h2><a>전체 보기 →</a></div><div class="grid1"><div class="tile big" style="background-image:url(_img/greencos2.jpg)"><small>기업 사옥 · 본사 · 지사 이전</small><b>오피스</b></div><div class="tile " style="background-image:url(_img/crest.jpg)"><b>교육 · 학원</b></div><div class="tile " style="background-image:url(_img/ccafe.jpg)"><b>프랜차이즈</b></div><div class="tile " style="background-image:url(_img/truel.jpg)"><b>리테일</b></div><div class="tile " style="background-image:url(_img/parkview.jpg)"><b>주거</b></div><div class="tile " style="background-image:url(_img/sinabt.jpg)"><b>건설</b></div><div class="tile more"><span>전체 시공사례 보기 →</span><em>170건 이상의 시공 기록</em></div></div></section>
+</body></html>

@@ -1,0 +1,154 @@
+<!DOCTYPE html><html lang="ko"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css"><style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { -webkit-font-smoothing: antialiased; }
+body { font-family: 'Pretendard Variable', Pretendard, sans-serif; color: #17181a; background: #fff; letter-spacing: -0.01em;
+  word-break: keep-all; }
+a { color: inherit; text-decoration: none; }
+img { display: block; }
+.wrap { width: 1240px; margin: 0 auto; }
+.hd { height: 84px; display: flex; align-items: center; justify-content: space-between; }
+.hd .logo img { height: 40px; }
+.hd nav { display: flex; gap: 40px; font-size: 15px; font-weight: 500; }
+.hd .tel { font-size: 14px; font-weight: 600; margin-left: 48px; }
+.hd .right { display: flex; align-items: center; }
+.btn { display: inline-flex; align-items: center; gap: 10px; height: 54px; padding: 0 28px; font-size: 16px; font-weight: 600; }
+.btn.dark { background: #17181a; color: #fff; }
+.btn.line { border: 1px solid #17181a; }
+.btn.white { background: #fff; color: #17181a; }
+.btn.wline { border: 1px solid rgba(255,255,255,.85); color: #fff; }
+.sec-title { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 22px; }
+.sec-title h2 { font-size: 26px; font-weight: 700; letter-spacing: -0.0275em; }
+.sec-title a { font-size: 14px; color: #6b6e75; }
+.cap b { display: block; font-size: 16px; font-weight: 600; margin-top: 12px; }
+.cap span { display: block; font-size: 13px; color: #7a7d84; margin-top: 4px; }
+.mo-only { display: none; }
+@media (max-width: 600px) {
+  .wrap { width: auto; margin: 0 20px; }
+  .hd { height: 60px; }
+  .hd .logo img { height: 30px; }
+  .hd nav, .hd .tel { display: none; }
+  .mo-only { display: block; }
+  .burger { width: 22px; height: 14px; border-top: 2px solid currentColor; border-bottom: 2px solid currentColor; position: relative; }
+  .burger::after { content: ""; position: absolute; left: 0; right: 0; top: 4px; border-top: 2px solid currentColor; }
+  .btn { height: 50px; padding: 0 20px; font-size: 15px; }
+}
+
+body.s4 { background: #0d0e10; color: #fff; }
+.topbar { position: fixed; top: 0; left: 0; right: 0; z-index: 30; color: #fff; transition: background .4s; }
+.topbar.solid { background: rgba(13,14,16,.78); backdrop-filter: blur(10px); }
+.h4 { position: relative; height: 100vh; min-height: 760px; background: #000 url(_img/greencos.jpg) center/cover; display: flex; align-items: flex-end; }
+.h4::before { content: ""; position: absolute; inset: 0; background: linear-gradient(0deg, rgba(8,9,10,.86) 0%, rgba(8,9,10,.45) 45%, rgba(8,9,10,.35) 100%); }
+.h4 .in { position: relative; padding-bottom: 130px; }
+.h4 .eng { font-size: 13px; letter-spacing: .32em; opacity: .75; }
+.h4 h1 { font-size: 92px; line-height: 1.14; font-weight: 800; letter-spacing: -0.0275em; margin-top: 22px; }
+.h4 p { font-size: 20px; opacity: .85; margin-top: 26px; }
+.cue { position: absolute; left: 50%; bottom: 34px; transform: translateX(-50%); font-size: 11px; letter-spacing: .3em; opacity: .7; text-align: center; }
+.cue i { display: block; width: 1px; height: 34px; background: #fff; margin: 10px auto 0; animation: cue 1.8s ease-in-out infinite; transform-origin: top; }
+@keyframes cue { 0% { transform: scaleY(0); } 50% { transform: scaleY(1); } 100% { transform: scaleY(0); transform-origin: bottom; } }
+.story { position: relative; height: 520vh; }
+.stage { position: sticky; top: 0; height: 100vh; overflow: hidden; }
+.bg { position: absolute; inset: 0; background: #111 center/cover; opacity: 0; transform: scale(1.08); transition: opacity 1s ease, transform 7s ease-out; }
+.bg.on { opacity: 1; transform: scale(1); }
+.stage::after { content: ""; position: absolute; inset: 0; z-index: 1;
+  background: linear-gradient(90deg, rgba(8,9,10,.84) 0%, rgba(8,9,10,.5) 45%, rgba(8,9,10,.12) 100%); }
+.ch { position: absolute; z-index: 2; left: calc(50% - 620px); top: 50%; width: 600px; opacity: 0; transform: translateY(-42%); transition: opacity .7s ease, transform .7s ease; }
+.ch.on { opacity: 1; transform: translateY(-52%); }
+.ch .no { font-size: 13px; letter-spacing: .22em; color: #e2564c; font-weight: 600; }
+.ch h2 { font-size: 54px; line-height: 1.26; font-weight: 700; letter-spacing: -0.0275em; margin-top: 18px; }
+.ch p { font-size: 18px; line-height: 1.75; opacity: .86; margin-top: 22px; width: 480px; }
+.ch .big { margin-top: 40px; display: flex; align-items: baseline; gap: 14px; }
+.ch .big b { font-size: 68px; font-weight: 800; letter-spacing: -0.02em; }
+.ch .big b em { font-style: normal; font-size: 34px; margin-left: 4px; }
+.ch .big > span { font-size: 14px; opacity: .7; }
+.track { position: absolute; z-index: 3; left: calc(50% - 620px); right: calc(50% - 620px); bottom: 46px; height: 46px; }
+.track .line, .track .fill { position: absolute; left: 0; top: 7px; height: 1px; }
+.track .line { right: 0; background: rgba(255,255,255,.22); }
+.track .fill { width: 0; background: #e2564c; transition: width .25s linear; }
+.track .pt { position: absolute; top: 0; transform: translateX(-50%); font-size: 12px; letter-spacing: .04em; color: rgba(255,255,255,.5); text-align: center; white-space: nowrap; transition: color .4s; }
+.track .pt::before { content: ""; display: block; width: 9px; height: 9px; border-radius: 50%; margin: 3px auto 12px; background: #0d0e10; border: 1px solid rgba(255,255,255,.4); transition: all .4s; }
+.track .pt.on { color: #fff; }
+.track .pt.on::before { background: #e2564c; border-color: #e2564c; }
+.cases4 { background: #f4f3f0; color: #17181a; padding: 130px 0 120px; }
+.cases4 .head { display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 44px; }
+.cases4 .head small { font-size: 12px; letter-spacing: .26em; color: #a8312a; font-weight: 600; }
+.cases4 h2 { font-size: 46px; line-height: 1.3; font-weight: 700; letter-spacing: -0.0275em; margin-top: 14px; }
+.cases4 .head a { font-size: 15px; color: #50535a; }
+.g4 { display: grid; grid-template-columns: 1.4fr 1fr 1fr; gap: 22px; }
+.g4 .card { opacity: 0; transform: translateY(40px); transition: opacity .8s ease, transform .8s ease; }
+.g4 .card.in { opacity: 1; transform: none; }
+.g4 .card:nth-child(2) { transition-delay: .12s; } .g4 .card:nth-child(3) { transition-delay: .24s; }
+.g4 .ph { height: 440px; background: #ddd center/cover; }
+.g4 .card:not(:first-child) .ph { height: 330px; margin-top: 110px; }
+.cta4 { padding: 130px 0; text-align: center; }
+.cta4 small { font-size: 12px; letter-spacing: .26em; opacity: .6; }
+.cta4 h2 { font-size: 52px; line-height: 1.3; font-weight: 700; letter-spacing: -0.0275em; margin-top: 18px; }
+.cta4 p { font-size: 18px; opacity: .78; margin-top: 20px; }
+.cta4 .btns { display: flex; gap: 12px; justify-content: center; margin-top: 40px; }
+@media (max-width: 600px) {
+  .h4 { min-height: 640px; }
+  .h4 .in { padding-bottom: 110px; }
+  .h4 .eng { font-size: 11px; }
+  .h4 h1 { font-size: 46px; }
+  .h4 p { font-size: 15px; }
+  .ch { left: 20px; right: 20px; width: auto; top: 44%; }
+  .ch h2 { font-size: 31px; }
+  .ch p { font-size: 15px; width: auto; }
+  .ch .big { margin-top: 26px; }
+  .ch .big b { font-size: 46px; }
+  .ch .big b em { font-size: 24px; }
+  .stage::after { background: linear-gradient(0deg, rgba(8,9,10,.9) 0%, rgba(8,9,10,.6) 55%, rgba(8,9,10,.35) 100%); }
+  .track { left: 20px; right: 20px; bottom: 30px; }
+  .track .pt { font-size: 10px; }
+  .cases4 { padding: 72px 0; }
+  .cases4 .head { flex-direction: column; align-items: flex-start; gap: 14px; margin-bottom: 26px; }
+  .cases4 h2 { font-size: 30px; }
+  .g4 { grid-template-columns: 1fr; gap: 26px; }
+  .g4 .ph, .g4 .card:not(:first-child) .ph { height: 240px; margin-top: 0; }
+  .cta4 { padding: 80px 0; }
+  .cta4 h2 { font-size: 30px; }
+  .cta4 p { font-size: 15px; }
+  .cta4 .btns { flex-direction: column; }
+  .cta4 .btns .btn { justify-content: center; }
+}
+</style></head><body class="s4">
+<div class="topbar"><header class="wrap hd"><a class="logo"><img src="_img/logo_white.svg" alt="SPACE331"></a><div class="right"><nav><a>회사소개</a><a>시공사례</a><a>오피스 솔루션</a><a>3분 공간 진단</a><a>프로젝트 문의</a></nav><span class="tel">02-2283-1331</span><span class="mo-only burger"></span></div></header></div>
+<section class="h4"><div class="wrap in"><div class="eng">SPACE331 · OFFICE INTERIOR</div>
+  <h1>기업의 성장을<br>담는 공간</h1><p>문정업무단지를 중심으로 오피스 이전·설계·시공을 함께합니다.</p></div>
+  <div class="cue">SCROLL<i></i></div></section>
+<section class="story"><div class="stage"><div class="bg" style="background-image:url(_img/munjeong.jpg)"></div><div class="bg" style="background-image:url(_img/plan.jpg)"></div><div class="bg" style="background-image:url(_img/grenex.jpg)"></div><div class="bg" style="background-image:url(_img/greencos.jpg)"></div><div class="ch"><div class="no">01 · 상담 · 진단</div><h2>몇 평이 필요한지부터<br>함께 계산합니다</h2><p>3분 공간 진단으로 필요한 면적과 예상 공사비를 먼저 확인하고, 후보 공간을 직접 실측합니다.</p><div class="big"><b><span data-to="3">3</span><em>분</em></b><span>공간 진단</span></div></div><div class="ch"><div class="no">02 · 설계</div><h2>일하는 방식이<br>그대로 도면이 됩니다</h2><p>업무석, 회의실, 동선을 실제 업무 흐름에 맞춰 배치하고 입주 전에 공간을 미리 보여 드립니다.</p><div class="big"><b><span data-to="6">6</span><em>개</em></b><span>시공 분야</span></div></div><div class="ch"><div class="no">03 · 시공</div><h2>보이지 않는 곳부터<br>먼저 확인합니다</h2><p>소방·공조·관리규정을 공사 전에 현장에서 검토하고, 실내건축공사업 면허로 직접 시공합니다.</p><div class="big"><b><span data-to="800">800</span><em>평</em></b><span>그린코스 오피스</span></div></div><div class="ch"><div class="no">04 · 입주 · 관리</div><h2>입주한 날부터가<br>시작입니다</h2><p>준공 후 관리까지 같은 팀이 맡습니다. 문정업무단지를 중심으로 빠르게 찾아갑니다.</p><div class="big"><b><span data-to="170">170</span><em>+</em></b><span>시공사례</span></div></div><div class="track"><div class="line"></div><div class="fill"></div><div class="pt" style="left:12.50%">01 상담 · 진단</div><div class="pt" style="left:37.50%">02 설계</div><div class="pt" style="left:62.50%">03 시공</div><div class="pt" style="left:87.50%">04 입주 · 관리</div></div></div></section>
+<section class="cases4"><div class="wrap"><div class="head"><div><small>OFFICE WORKS</small><h2>직접 시공한 오피스</h2></div><a>전체 시공사례 보기 →</a></div>
+  <div class="g4"><div class="card"><div class="ph" style="background-image:url(_img/greencos2.jpg)"></div><div class="cap"><b>그린코스(주)</b><span>서울 강서구 마곡동 · 800평</span></div></div><div class="card"><div class="ph" style="background-image:url(_img/grenex2.jpg)"></div><div class="cap"><b>(주)그레넥스</b><span>서울 송파구 문정동 · 64평</span></div></div><div class="card"><div class="ph" style="background-image:url(_img/metarich.jpg)"></div><div class="cap"><b>(주)메타리치</b><span>충북 청주시 흥덕구 · 87평</span></div></div></div></div></section>
+<section class="cta4"><div class="wrap"><small>3 MINUTE CHECK</small><h2>우리 회사에는<br>몇 평이 필요할까요?</h2>
+  <p>인원과 회의실 수만 넣으면 필요한 면적과 예상 공사비를 바로 알려 드립니다.</p>
+  <div class="btns"><a class="btn white">3분 공간 진단 시작 →</a><a class="btn wline">프로젝트 상담 02-2283-1331</a></div></div></section>
+
+<script>
+(() => {
+  const story = document.querySelector('.story');
+  const bgs = [...document.querySelectorAll('.bg')], chs = [...document.querySelectorAll('.ch')];
+  const pts = [...document.querySelectorAll('.track .pt')], fill = document.querySelector('.track .fill');
+  const bar = document.querySelector('.topbar');
+  const counted = new Set();
+  function count(el) {
+    if (counted.has(el)) return; counted.add(el);
+    const to = +el.dataset.to, t0 = performance.now();
+    (function step() { const k = Math.max(0, Math.min(1, (performance.now() - t0) / 1100)); el.textContent = Math.round(to * (1 - Math.pow(1 - k, 3)));
+      if (k < 1) requestAnimationFrame(step); })();
+  }
+  function onScroll() {
+    const total = story.offsetHeight - innerHeight;
+    const p = Math.min(1, Math.max(0, -story.getBoundingClientRect().top / total));
+    const idx = Math.min(chs.length - 1, Math.floor(p * chs.length));
+    bgs.forEach((b, i) => b.classList.toggle('on', i === idx));
+    chs.forEach((c, i) => { c.classList.toggle('on', i === idx); if (i === idx) c.querySelectorAll('[data-to]').forEach(count); });
+    pts.forEach((pt, i) => pt.classList.toggle('on', i <= idx));
+    fill.style.width = (p * 100) + '%';
+    bar.classList.toggle('solid', scrollY > 40);
+  }
+  addEventListener('scroll', onScroll, { passive: true }); onScroll();
+  const io = new IntersectionObserver(es => es.forEach(e => e.isIntersecting && e.target.classList.add('in')), { threshold: .2 });
+  document.querySelectorAll('.g4 .card').forEach(c => io.observe(c));
+})();
+</script>
+
+</body></html>
